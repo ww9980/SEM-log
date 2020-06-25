@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MetroFramework;
+using MetroFramework.Forms;
+
+namespace SEM_log
+{
+    public partial class FormLogin : MetroFramework.Forms.MetroForm
+    {
+        public FormLogin()
+        {
+            InitializeComponent();
+        }
+
+        public cLog logitem;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mbLogin_Click(object sender, EventArgs e)
+        {
+            if (mtbUser.Text == "")
+            {
+                MetroMessageBox.Show(this, "Entre your user name and try again. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            logitem = new cLog(mtbUser.Text, DateTime.Now.ToString("HH:mm:ss"));
+            this.Hide();
+            notifyIcon1.Visible = true;
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var logform = new FormLog();
+            logform.ShowDialog();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MetroMessageBox.Show(this, "Created by Fan. Released under GPL v3 license. ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+}
