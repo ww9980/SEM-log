@@ -29,14 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSEMon));
+            this.timerAutoOff = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.mlUser = new MetroFramework.Controls.MetroLabel();
             this.mlTimer = new MetroFramework.Controls.MetroLabel();
             this.mlALO = new MetroFramework.Controls.MetroLabel();
             this.mbLogoff = new MetroFramework.Controls.MetroButton();
+            this.timerCS = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timerAutoOff
+            // 
+            this.timerAutoOff.Interval = 30000;
+            this.timerAutoOff.Tick += new System.EventHandler(this.timerAutoOff_Tick);
             // 
             // tableLayoutPanel1
             // 
@@ -104,6 +111,7 @@
             this.ClientSize = new System.Drawing.Size(399, 152);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormSEMon";
@@ -120,11 +128,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerAutoOff;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroLabel mlUser;
         private MetroFramework.Controls.MetroLabel mlTimer;
         private MetroFramework.Controls.MetroLabel mlALO;
         private MetroFramework.Controls.MetroButton mbLogoff;
+        private System.Windows.Forms.Timer timerCS;
     }
 }

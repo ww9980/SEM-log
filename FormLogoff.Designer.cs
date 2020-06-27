@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogoff));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -118,6 +119,7 @@
             this.mbOK.TabIndex = 5;
             this.mbOK.Text = "OK";
             this.mbOK.UseSelectable = true;
+            this.mbOK.Click += new System.EventHandler(this.mbOK_Click);
             // 
             // mtbUser
             // 
@@ -253,10 +255,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogoff";
             this.Resizable = false;
             this.Text = "Log off";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FormLogoff_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

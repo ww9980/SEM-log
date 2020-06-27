@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace SEM_log
         public bool OFFflagBSD;
         public bool OFFflagError;
         public string OFFnote;
+        public string totalmin;
 
         public void writeToFile()
         {
@@ -43,14 +45,16 @@ namespace SEM_log
                     return;
                 }
             }
-            string fpath = path + OFFtimestamp;
+            string fpath = path + "\\" + OFFtimestamp.Replace(":", "");
             if (File.Exists(fpath))
             {
                 MessageBox.Show("Error when creating log file. \n" 
-                        + "\nFile name conflicts. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        + "\nFile already exists. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            string output = JsonConvert.SerializeObject(this);
+            File.WriteAllText(fpath, output);
         }
+
     }
 }

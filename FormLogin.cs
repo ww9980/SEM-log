@@ -36,9 +36,9 @@ namespace SEM_log
             }
 
             logitem = new cLog(mtbUser.Text, DateTime.Now.ToString("HH:mm:ss"));
-            this.Hide();
-            notifyIcon1.Visible = true;
-
+            Close();
+            var mon = new FormSEMon(logitem);
+            mon.Show();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -49,7 +49,9 @@ namespace SEM_log
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MetroMessageBox.Show(this, "Created by Fan. Released under GPL v3 license. ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(this, "Created by Fan. " +
+                "Released under GPL v3 license. ", 
+                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

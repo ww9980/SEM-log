@@ -12,16 +12,30 @@ namespace SEM_log
 {
     public partial class FormLogoff : MetroFramework.Forms.MetroForm
     {
-        public FormLogoff(string username)
+        public FormLogoff(cLog log)
         {
             InitializeComponent();
-            mtbUser.Text = username;
-            mtbUser.Enabled = false;
+            currentLog = log;
         }
+
+        private cLog currentLog;
 
         private void FormLogoff_Load(object sender, EventArgs e)
         {
+            mtbUser.Text = currentLog.user;
+            mtbUser.Enabled = false;
+        }
 
+        private void mbOK_Click(object sender, EventArgs e)
+        {
+            currentLog.OFFflagEDX = cbEDX.Checked;
+            currentLog.OFFflagBSD = cbBSD.Checked;
+            currentLog.OFFflagError = rbErr.Checked;
+            currentLog.OFFnote = mtbNote.Text;
+            currentLog.writeToFile();
+            this.Close();
+            var newform = new FormLogin();
+            newform.Show();
         }
     }
 }
