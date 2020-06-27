@@ -19,6 +19,10 @@ namespace SEM_log
             currentlog = log;
         }
 
+
+        private int timeinsec = 0;
+        private int autooff = 0;
+
         private cLog currentlog;
         private DateTime starttime;
 
@@ -47,6 +51,27 @@ namespace SEM_log
             currentlog.totalmin = DateTime.Now.Subtract(starttime).ToString("mm");
             currentlog.OFFtimestamp = DateTime.Now.ToString("HH:mm:ss");
             currentlog.OFFnote = "Auto timeout after " + currentlog.totalmin + " mins. ";
+        }
+
+        private void timerCS_Tick(object sender, EventArgs e)
+        {
+            timeinsec++;
+            if (timeinsec / 60 > 0)
+            {
+                var timeinmin = (int)(timeinsec / 60);
+                var timeextrasec = timeinsec % 60;
+                mlTimer.Text = "Current session: " + timeinmin.ToString() + " min " + timeextrasec.ToString() + " s";
+            }
+            else
+            {
+                mlTimer.Text = "Current session: " + timeinsec.ToString() + " s";
+            }
+        }
+
+        private void timerAutoOffReminder_Tick(object sender, EventArgs e)
+        {
+            autooff++;
+            mlALO.Text = "Autologoff in " + (5-autooff).ToString() + " min";
         }
     }
 }
