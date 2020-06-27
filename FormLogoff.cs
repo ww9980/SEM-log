@@ -29,9 +29,10 @@ namespace SEM_log
 
         private void mbOK_Click(object sender, EventArgs e)
         {
-            if (!(rbErr.Checked && rbNoErr.Checked))
+            if (!(rbErr.Checked || rbNoErr.Checked))
             {
-                MetroMessageBox.Show(this, "Please select if there was any error during the session. ");
+                MetroMessageBox.Show(this, 
+                    "Please select if there was any error during the session. ");
                 return;
             }
             currentLog.OFFflagEDX = cbEDX.Checked;

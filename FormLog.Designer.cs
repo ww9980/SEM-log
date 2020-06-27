@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLog));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ListLog = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.14475F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.85525F));
-            this.tableLayoutPanel1.Controls.Add(this.listView1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ListLog, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -57,15 +57,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(815, 479);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // listView1
+            // ListLog
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(167, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(645, 473);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.ListLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListLog.HideSelection = false;
+            this.ListLog.Location = new System.Drawing.Point(167, 3);
+            this.ListLog.Name = "ListLog";
+            this.ListLog.Size = new System.Drawing.Size(645, 473);
+            this.ListLog.TabIndex = 1;
+            this.ListLog.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanel2
             // 
@@ -111,6 +111,7 @@
             this.cbDay.Name = "cbDay";
             this.cbDay.Size = new System.Drawing.Size(152, 392);
             this.cbDay.TabIndex = 2;
+            this.cbDay.SelectedValueChanged += new System.EventHandler(this.cbDay_SelectedValueChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -140,6 +141,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLog";
             this.Text = "Log viewer";
+            this.Load += new System.EventHandler(this.FormLog_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -151,7 +153,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ListLog;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.ComboBox cbMonth;
