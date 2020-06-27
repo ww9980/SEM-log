@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,9 +29,18 @@ namespace SEM_log
 
         private void mbOK_Click(object sender, EventArgs e)
         {
+            if (!(rbErr.Checked && rbNoErr.Checked))
+            {
+                MetroMessageBox.Show(this, "Please select if there was any error during the session. ");
+                return;
+            }
             currentLog.OFFflagEDX = cbEDX.Checked;
             currentLog.OFFflagBSD = cbBSD.Checked;
             currentLog.OFFflagError = rbErr.Checked;
+            if (mtbNote.Text == "Fill in any details or comments")
+            {
+                mtbNote.Text = "";
+            }
             currentLog.OFFnote = mtbNote.Text;
             currentLog.writeToFile();
             this.Close();

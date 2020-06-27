@@ -29,9 +29,10 @@ namespace SEM_log
 
         private void mbLogin_Click(object sender, EventArgs e)
         {
-            if (mtbUser.Text == "")
+            if (mtbUser.Text == "" || mtbUser.Text.Length < 3)
             {
-                MetroMessageBox.Show(this, "Entre your user name and try again. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Entre your user name and try again. ",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
