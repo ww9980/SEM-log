@@ -45,7 +45,7 @@ namespace SEM_log
             currentLog.OFFnote = mtbNote.Text;
             currentLog.writeToFile();
             this.Close();
-            var newform = new FormLogin();
+            var newform = new FormLogin(currentLog);
             newform.Show();
         }
     }

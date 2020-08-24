@@ -186,5 +186,17 @@
   <ItemGroup>
     <None Include="Resources\CLOSE_26886.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-checkmark-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-x-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

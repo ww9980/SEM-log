@@ -33,7 +33,7 @@ namespace SEM_log
                     ContextMenu = new ContextMenu(new MenuItem[] {
                     new MenuItem("Exit", Exit),
                     new MenuItem("Log viewer", LogView),
-                    new MenuItem("Login", Login),
+                    //new MenuItem("Login", Login),
                     new MenuItem("About", About)
                     }),
                     Visible = true
@@ -63,7 +63,7 @@ namespace SEM_log
 
             void About(object sender, EventArgs e)
             {
-                MessageBox.Show("Created by Fan. " +
+                MessageBox.Show("Created by W Fan. " +
                     "Released under GPL v3 license. ",
                     "SEM log", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
