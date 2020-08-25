@@ -83,6 +83,16 @@ namespace SEM_log.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon FanIcon {
+            get {
+                object obj = ResourceManager.GetObject("FanIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon log {
             get {
                 object obj = ResourceManager.GetObject("log", resourceCulture);

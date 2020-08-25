@@ -29,7 +29,7 @@ namespace SEM_log
                 // Initialize Tray Icon
                 trayIcon = new NotifyIcon()
                 {
-                    Icon = Resources.Fan,
+                    Icon = Resources.FanIcon,
                     ContextMenu = new ContextMenu(new MenuItem[] {
                     new MenuItem("Exit", Exit),
                     new MenuItem("Log viewer", LogView),

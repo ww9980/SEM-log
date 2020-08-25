@@ -65,5 +65,10 @@ namespace SEM_log
                 ListLog.Items.Add(fj);
             }
         }
+
+        private void cbYear_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

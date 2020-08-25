@@ -94,6 +94,7 @@
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(152, 21);
             this.cbYear.TabIndex = 0;
+            this.cbYear.SelectedValueChanged += new System.EventHandler(this.cbYear_SelectedValueChanged);
             // 
             // cbMonth
             // 
