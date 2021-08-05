@@ -43,9 +43,18 @@
             this.rbNoErr = new MetroFramework.Controls.MetroRadioButton();
             this.rbErr = new MetroFramework.Controls.MetroRadioButton();
             this.mtbNote = new MetroFramework.Controls.MetroTextBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.numGunVacA = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.numGunVacB = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGunVacA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGunVacB)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -56,21 +65,26 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.mbOK, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel4, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.mbOK, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.mtbUser, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.mtbNote, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.mtbNote, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(760, 370);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -86,7 +100,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 37);
+            this.metroLabel2.Location = new System.Drawing.Point(3, 30);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(122, 19);
             this.metroLabel2.TabIndex = 1;
@@ -95,7 +109,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 74);
+            this.metroLabel3.Location = new System.Drawing.Point(3, 60);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(71, 19);
             this.metroLabel3.TabIndex = 2;
@@ -104,7 +118,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 111);
+            this.metroLabel4.Location = new System.Drawing.Point(3, 150);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(102, 19);
             this.metroLabel4.TabIndex = 3;
@@ -113,9 +127,9 @@
             // mbOK
             // 
             this.mbOK.Dock = System.Windows.Forms.DockStyle.Right;
-            this.mbOK.Location = new System.Drawing.Point(592, 336);
+            this.mbOK.Location = new System.Drawing.Point(592, 338);
             this.mbOK.Name = "mbOK";
-            this.mbOK.Size = new System.Drawing.Size(165, 31);
+            this.mbOK.Size = new System.Drawing.Size(165, 29);
             this.mbOK.TabIndex = 5;
             this.mbOK.Text = "OK";
             this.mbOK.UseSelectable = true;
@@ -127,9 +141,9 @@
             // 
             // 
             this.mtbUser.CustomButton.Image = null;
-            this.mtbUser.CustomButton.Location = new System.Drawing.Point(202, 1);
+            this.mtbUser.CustomButton.Location = new System.Drawing.Point(210, 2);
             this.mtbUser.CustomButton.Name = "";
-            this.mtbUser.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.mtbUser.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.mtbUser.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtbUser.CustomButton.TabIndex = 1;
             this.mtbUser.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -147,7 +161,7 @@
             this.mtbUser.SelectionLength = 0;
             this.mtbUser.SelectionStart = 0;
             this.mtbUser.ShortcutsEnabled = true;
-            this.mtbUser.Size = new System.Drawing.Size(232, 31);
+            this.mtbUser.Size = new System.Drawing.Size(232, 24);
             this.mtbUser.TabIndex = 6;
             this.mtbUser.Text = "User";
             this.mtbUser.UseSelectable = true;
@@ -159,9 +173,9 @@
             this.flowLayoutPanel1.Controls.Add(this.cbEDX);
             this.flowLayoutPanel1.Controls.Add(this.cbBSD);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(220, 40);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(220, 33);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(537, 31);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(537, 24);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // cbEDX
@@ -189,9 +203,9 @@
             this.flowLayoutPanel2.Controls.Add(this.rbNoErr);
             this.flowLayoutPanel2.Controls.Add(this.rbErr);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(220, 77);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(220, 63);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(537, 31);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(537, 24);
             this.flowLayoutPanel2.TabIndex = 8;
             // 
             // rbNoErr
@@ -220,9 +234,9 @@
             // 
             // 
             this.mtbNote.CustomButton.Image = null;
-            this.mtbNote.CustomButton.Location = new System.Drawing.Point(323, 2);
+            this.mtbNote.CustomButton.Location = new System.Drawing.Point(359, 1);
             this.mtbNote.CustomButton.Name = "";
-            this.mtbNote.CustomButton.Size = new System.Drawing.Size(211, 211);
+            this.mtbNote.CustomButton.Size = new System.Drawing.Size(177, 177);
             this.mtbNote.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtbNote.CustomButton.TabIndex = 1;
             this.mtbNote.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -231,7 +245,7 @@
             this.mtbNote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtbNote.Lines = new string[] {
         "Fill in any details or comments"};
-            this.mtbNote.Location = new System.Drawing.Point(220, 114);
+            this.mtbNote.Location = new System.Drawing.Point(220, 153);
             this.mtbNote.MaxLength = 32767;
             this.mtbNote.Multiline = true;
             this.mtbNote.Name = "mtbNote";
@@ -241,12 +255,95 @@
             this.mtbNote.SelectionLength = 0;
             this.mtbNote.SelectionStart = 0;
             this.mtbNote.ShortcutsEnabled = true;
-            this.mtbNote.Size = new System.Drawing.Size(537, 216);
+            this.mtbNote.Size = new System.Drawing.Size(537, 179);
             this.mtbNote.TabIndex = 9;
             this.mtbNote.Text = "Fill in any details or comments";
             this.mtbNote.UseSelectable = true;
             this.mtbNote.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtbNote.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.numGunVacA);
+            this.flowLayoutPanel3.Controls.Add(this.metroLabel7);
+            this.flowLayoutPanel3.Controls.Add(this.numGunVacB);
+            this.flowLayoutPanel3.Controls.Add(this.metroLabel8);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(220, 93);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(537, 24);
+            this.flowLayoutPanel3.TabIndex = 14;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(72, 0);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel7.TabIndex = 15;
+            this.metroLabel7.Text = "x10^";
+            // 
+            // numGunVacA
+            // 
+            this.numGunVacA.Location = new System.Drawing.Point(3, 3);
+            this.numGunVacA.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            393216});
+            this.numGunVacA.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            393216});
+            this.numGunVacA.Name = "numGunVacA";
+            this.numGunVacA.Size = new System.Drawing.Size(63, 20);
+            this.numGunVacA.TabIndex = 12;
+            this.numGunVacA.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            393216});
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(183, 0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel8.TabIndex = 16;
+            this.metroLabel8.Text = "mTorr";
+            // 
+            // numGunVacB
+            // 
+            this.numGunVacB.Location = new System.Drawing.Point(114, 3);
+            this.numGunVacB.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.numGunVacB.Minimum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            -2147483648});
+            this.numGunVacB.Name = "numGunVacB";
+            this.numGunVacB.Size = new System.Drawing.Size(63, 20);
+            this.numGunVacB.TabIndex = 17;
+            this.numGunVacB.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(3, 90);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel5.TabIndex = 10;
+            this.metroLabel5.Text = "Gun vac";
             // 
             // FormLogoff
             // 
@@ -266,6 +363,10 @@
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGunVacA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGunVacB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,5 +387,11 @@
         private MetroFramework.Controls.MetroRadioButton rbNoErr;
         private MetroFramework.Controls.MetroRadioButton rbErr;
         private MetroFramework.Controls.MetroTextBox mtbNote;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private System.Windows.Forms.NumericUpDown numGunVacA;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private System.Windows.Forms.NumericUpDown numGunVacB;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }

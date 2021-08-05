@@ -56,7 +56,7 @@
             this.tableLayoutPanel1.Controls.Add(this.mlALO, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.mbLogoff, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 55);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 65);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -118,21 +118,22 @@
             // 
             // FormSEMon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 140);
+            this.ClientSize = new System.Drawing.Size(399, 152);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormSEMon";
-            this.Padding = new System.Windows.Forms.Padding(20, 55, 20, 18);
+            this.Padding = new System.Windows.Forms.Padding(20, 65, 20, 20);
             this.Resizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "SEMlog";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FormSEMon_Load);
+            this.LocationChanged += new System.EventHandler(this.FormSEMon_LocationChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

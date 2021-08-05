@@ -73,5 +73,25 @@ namespace SEM_log
             autooff++;
             mlALO.Text = "Autologoff in " + (5-autooff).ToString() + " min";
         }
+
+        private void FormSEMon_LocationChanged(object sender, EventArgs e)
+        {
+            if (Top < 0)
+            {
+                this.Top = 0;
+            }
+            if (this.Left < 0)
+            {
+                Left = 0;
+            }
+            if (Bottom > Screen.PrimaryScreen.Bounds.Height)
+            {
+                this.Top = Screen.PrimaryScreen.Bounds.Height - this.Height;
+            }
+            if (Right > Screen.PrimaryScreen.Bounds.Width)
+            {
+                this.Left = Screen.PrimaryScreen.Bounds.Width - this.Width;
+            }
+        }
     }
 }

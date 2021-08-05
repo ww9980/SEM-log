@@ -28,6 +28,11 @@ namespace SEM_log
         public bool OFFflagError;
         public string OFFnote;
         public string totalmin;
+        public int currentON=0;
+        public int currentOFF=0;
+        public double ratio = 0.0;
+        public double GunVacA = 0.0;
+        public double GunVacB = 0.0;
 
         public void writeToFile()
         {

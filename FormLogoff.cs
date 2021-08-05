@@ -43,6 +43,9 @@ namespace SEM_log
                 mtbNote.Text = "";
             }
             currentLog.OFFnote = mtbNote.Text;
+            currentLog.GunVacA = (double)numGunVacA.Value;
+            currentLog.GunVacB = (double)numGunVacB.Value;
+
             currentLog.writeToFile();
             this.Close();
             var newform = new FormLogin(currentLog);
