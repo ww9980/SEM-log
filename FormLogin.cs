@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
@@ -21,10 +22,13 @@ namespace SEM_log
         const int GUIDE_DISTANCE = 30;
         // 窗体靠边凸出显示部分距离
         const int BULGE_DISTANCE = 5;
+        private FormFSL formFSL;
 
         public FormLogin()
         {
             InitializeComponent();
+            formFSL = new FormFSL(this);
+            formFSL.Show();
         }
 
         public FormLogin(cLog lastSession)
@@ -92,14 +96,16 @@ namespace SEM_log
 
         private void mbLogin_Click(object sender, EventArgs e)
         {
-            if (mtbUser.Text == "" || mtbUser.Text.Length < 3)
+            var usernameformatted = Regex.Replace(mtbUser.Text, @"[\d-]", string.Empty);
+            if (usernameformatted == "" || usernameformatted.Length < 3)
             {
                 MetroMessageBox.Show(this, "Entre your user name and try again. ",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            logitem = new cLog(mtbUser.Text, DateTime.Now.ToString("HH:mm:ss"));
+            logitem = new cLog(usernameformatted, DateTime.Now.ToString("HH:mm:ss"));
+            formFSL.Close();
             Close();
             var mon = new FormSEMon(logitem);
             mon.Show();
@@ -120,7 +126,10 @@ namespace SEM_log
 
         private void mbMin_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            MetroMessageBox.Show(this, "Created by W Fan. " +
+                "Released under GPL v3 license. ",
+                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //this.WindowState = FormWindowState.Minimized;
         }
 
         private void FormLogin_Move(object sender, EventArgs e)

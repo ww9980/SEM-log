@@ -43,7 +43,8 @@
             // 
             // timerAutoOff
             // 
-            this.timerAutoOff.Interval = 300000;
+            this.timerAutoOff.Enabled = true;
+            this.timerAutoOff.Interval = 1000;
             this.timerAutoOff.Tick += new System.EventHandler(this.timerAutoOff_Tick);
             // 
             // tableLayoutPanel1
@@ -92,7 +93,7 @@
             this.mlALO.Name = "mlALO";
             this.mlALO.Size = new System.Drawing.Size(174, 34);
             this.mlALO.TabIndex = 2;
-            this.mlALO.Text = "Autologoff in 5min";
+            this.mlALO.Text = "Autologoff disabled";
             // 
             // mbLogoff
             // 
@@ -113,7 +114,8 @@
             // 
             // timerAutoOffReminder
             // 
-            this.timerAutoOffReminder.Interval = 60000;
+            this.timerAutoOffReminder.Enabled = true;
+            this.timerAutoOffReminder.Interval = 1000;
             this.timerAutoOffReminder.Tick += new System.EventHandler(this.timerAutoOffReminder_Tick);
             // 
             // FormSEMon

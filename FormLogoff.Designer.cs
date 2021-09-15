@@ -43,12 +43,12 @@
             this.rbNoErr = new MetroFramework.Controls.MetroRadioButton();
             this.rbErr = new MetroFramework.Controls.MetroRadioButton();
             this.mtbNote = new MetroFramework.Controls.MetroTextBox();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.numGunVacA = new System.Windows.Forms.NumericUpDown();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.numGunVacB = new System.Windows.Forms.NumericUpDown();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.numGunVacA = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.numGunVacB = new System.Windows.Forms.NumericUpDown();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -262,6 +262,15 @@
             this.mtbNote.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtbNote.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(3, 90);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel5.TabIndex = 10;
+            this.metroLabel5.Text = "Gun vac";
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.numGunVacA);
@@ -274,17 +283,14 @@
             this.flowLayoutPanel3.Size = new System.Drawing.Size(537, 24);
             this.flowLayoutPanel3.TabIndex = 14;
             // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(72, 0);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel7.TabIndex = 15;
-            this.metroLabel7.Text = "x10^";
-            // 
             // numGunVacA
             // 
+            this.numGunVacA.DecimalPlaces = 2;
+            this.numGunVacA.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.numGunVacA.Location = new System.Drawing.Point(3, 3);
             this.numGunVacA.Maximum = new decimal(new int[] {
             9999999,
@@ -305,14 +311,14 @@
             0,
             393216});
             // 
-            // metroLabel8
+            // metroLabel7
             // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(183, 0);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel8.TabIndex = 16;
-            this.metroLabel8.Text = "mTorr";
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(72, 0);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel7.TabIndex = 15;
+            this.metroLabel7.Text = "x10^";
             // 
             // numGunVacB
             // 
@@ -331,19 +337,19 @@
             this.numGunVacB.Size = new System.Drawing.Size(63, 20);
             this.numGunVacB.TabIndex = 17;
             this.numGunVacB.Value = new decimal(new int[] {
-            5,
+            9,
             0,
             0,
             -2147483648});
             // 
-            // metroLabel5
+            // metroLabel8
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(3, 90);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel5.TabIndex = 10;
-            this.metroLabel5.Text = "Gun vac";
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(183, 0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel8.TabIndex = 16;
+            this.metroLabel8.Text = "mTorr";
             // 
             // FormLogoff
             // 

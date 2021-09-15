@@ -32,7 +32,23 @@ namespace SEM_log
             if (!(rbErr.Checked || rbNoErr.Checked))
             {
                 MetroMessageBox.Show(this, 
-                    "Please select if there was any error during the session. ");
+                    "Please select if there was any error during the session. ",
+                    "Fill it in ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (rbErr.Checked)
+            {
+                MetroMessageBox.Show(this,
+                    "Please flip the SEM status to SEM DOWN DO NOT USE and " +
+                    "contact the superusers to fix the errors. ", 
+                    "OH NO! ",MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+            if ((double)numGunVacA.Value == 0.000001)
+            {
+                MetroMessageBox.Show(this,
+                    "Please fill in the gun vacuum. ",
+                    "Vac? ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             currentLog.OFFflagEDX = cbEDX.Checked;

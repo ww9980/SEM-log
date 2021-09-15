@@ -98,7 +98,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.686609F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.31339F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.mbMin, 2, 0);
@@ -125,7 +125,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(624, 153);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(623, 153);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // metroLabel1
@@ -135,7 +135,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(3, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(120, 76);
+            this.metroLabel1.Size = new System.Drawing.Size(119, 76);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "User:";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,7 +144,7 @@
             // 
             this.panel1.Controls.Add(this.mtbUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(129, 3);
+            this.panel1.Location = new System.Drawing.Point(128, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(492, 70);
             this.panel1.TabIndex = 2;
@@ -193,7 +193,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.96774F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.03226F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(624, 62);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(623, 62);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // textLastStatus
@@ -202,7 +202,7 @@
             this.textLastStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textLastStatus.Location = new System.Drawing.Point(47, 12);
             this.textLastStatus.Name = "textLastStatus";
-            this.textLastStatus.Size = new System.Drawing.Size(574, 50);
+            this.textLastStatus.Size = new System.Drawing.Size(573, 50);
             this.textLastStatus.TabIndex = 1;
             this.textLastStatus.WrapToLine = true;
             // 
@@ -217,12 +217,12 @@
             // 
             // mbMin
             // 
-            this.mbMin.Location = new System.Drawing.Point(700, 3);
+            this.mbMin.Location = new System.Drawing.Point(699, 3);
             this.mbMin.Name = "mbMin";
             this.mbMin.Size = new System.Drawing.Size(27, 30);
             this.mbMin.TabIndex = 5;
             this.mbMin.TabStop = false;
-            this.mbMin.Text = "__";
+            this.mbMin.Text = "?";
             this.mbMin.UseSelectable = true;
             this.mbMin.Click += new System.EventHandler(this.mbMin_Click);
             // 
