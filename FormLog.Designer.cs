@@ -30,16 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLog));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ListLog = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
             this.cbDay = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.ListLog = new System.Windows.Forms.ListView();
+            this.tbInfo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -47,8 +50,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.14475F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.85525F));
-            this.tableLayoutPanel1.Controls.Add(this.ListLog, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -56,16 +59,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(815, 479);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // ListLog
-            // 
-            this.ListLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListLog.HideSelection = false;
-            this.ListLog.Location = new System.Drawing.Point(167, 3);
-            this.ListLog.Name = "ListLog";
-            this.ListLog.Size = new System.Drawing.Size(645, 473);
-            this.ListLog.TabIndex = 1;
-            this.ListLog.UseCompatibleStateImageBehavior = false;
             // 
             // tableLayoutPanel2
             // 
@@ -89,6 +82,7 @@
             // 
             // cbYear
             // 
+            this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbYear.FormattingEnabled = true;
             this.cbYear.Location = new System.Drawing.Point(3, 28);
             this.cbYear.Name = "cbYear";
@@ -98,11 +92,13 @@
             // 
             // cbMonth
             // 
+            this.cbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMonth.FormattingEnabled = true;
             this.cbMonth.Location = new System.Drawing.Point(3, 53);
             this.cbMonth.Name = "cbMonth";
             this.cbMonth.Size = new System.Drawing.Size(152, 21);
             this.cbMonth.TabIndex = 1;
+            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             // 
             // cbDay
             // 
@@ -112,6 +108,7 @@
             this.cbDay.Name = "cbDay";
             this.cbDay.Size = new System.Drawing.Size(152, 392);
             this.cbDay.TabIndex = 2;
+            this.cbDay.SelectedIndexChanged += new System.EventHandler(this.cbDay_SelectedIndexChanged);
             this.cbDay.SelectedValueChanged += new System.EventHandler(this.cbDay_SelectedValueChanged);
             // 
             // flowLayoutPanel1
@@ -133,6 +130,41 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Browse log history";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.ListLog, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tbInfo, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(167, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(645, 473);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // ListLog
+            // 
+            this.ListLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListLog.HideSelection = false;
+            this.ListLog.Location = new System.Drawing.Point(3, 3);
+            this.ListLog.Name = "ListLog";
+            this.ListLog.Size = new System.Drawing.Size(316, 467);
+            this.ListLog.TabIndex = 2;
+            this.ListLog.UseCompatibleStateImageBehavior = false;
+            this.ListLog.SelectedIndexChanged += new System.EventHandler(this.ListLog_SelectedIndexChanged);
+            // 
+            // tbInfo
+            // 
+            this.tbInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbInfo.Location = new System.Drawing.Point(325, 3);
+            this.tbInfo.Multiline = true;
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.Size = new System.Drawing.Size(317, 467);
+            this.tbInfo.TabIndex = 3;
+            // 
             // FormLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +179,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -154,12 +188,14 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView ListLog;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.ListBox cbDay;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.ListView ListLog;
+        private System.Windows.Forms.TextBox tbInfo;
     }
 }

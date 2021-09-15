@@ -26,6 +26,7 @@ namespace SEM_log
         public bool OFFflagEDX;
         public bool OFFflagBSD;
         public bool OFFflagError;
+        public bool OFFflagRepair = false;
         public string OFFnote;
         public string totalmin;
         public int currentON=0;

@@ -51,6 +51,11 @@ namespace SEM_log
                     "Vac? ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (currentLog.user.ToLower() == "semsu" || currentLog.user.ToLower() == "fansu"
+                || currentLog.user.ToLower() == "supersuer")
+            {
+                currentLog.OFFflagRepair = true;
+            }
             currentLog.OFFflagEDX = cbEDX.Checked;
             currentLog.OFFflagBSD = cbBSD.Checked;
             currentLog.OFFflagError = rbErr.Checked;
