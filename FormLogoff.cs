@@ -36,14 +36,6 @@ namespace SEM_log
                     "Fill it in ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (rbErr.Checked)
-            {
-                MetroMessageBox.Show(this,
-                    "Please flip the SEM status to SEM DOWN DO NOT USE and " +
-                    "contact the superusers to fix the errors. ", 
-                    "OH NO! ",MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return;
-            }
             if ((double)numGunVacA.Value == 0.000001)
             {
                 MetroMessageBox.Show(this,
@@ -68,6 +60,13 @@ namespace SEM_log
             currentLog.GunVacB = (double)numGunVacB.Value;
 
             currentLog.writeToFile();
+            if (rbErr.Checked)
+            {
+                MetroMessageBox.Show(this,
+                    "Please flip the SEM status to SEM DOWN DO NOT USE and " +
+                    "contact the superusers to fix the errors. ",
+                    "OH NO! ", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
             this.Close();
             var newform = new FormLogin(currentLog);
             newform.Show();

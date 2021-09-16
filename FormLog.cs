@@ -188,17 +188,17 @@ namespace SEM_log
             tbInfo.Text = "Log file on " + cbYear.Text +
                 cbMonth.Text + cbDay.SelectedItem.ToString() + " at " 
                 + ListLog.SelectedItems[0].Text + " hours" + 
-                "\nUser = " + logitem.user +
-                "\nSU? = " + logitem.OFFflagRepair +
-                "\nAuto log off? = " + logitem.OFFflagAuto +
-                "\nERROR? = " + logitem.OFFflagError +
-                "\nOn time = " + logitem.ONtimestamp +
+                "\r\nUser = " + logitem.user +
+                "\r\nSU? = " + logitem.OFFflagRepair +
+                "\r\nAuto log off? = " + logitem.OFFflagAuto +
+                "\r\nERROR? = " + logitem.OFFflagError +
+                "\r\nOn time = " + logitem.ONtimestamp +
                 " off time = " + logitem.OFFtimestamp +
                 " total min spent = " + logitem.totalmin +
-                "\n\nFunctions EDX = " + logitem.OFFflagEDX +
-                "\nFunctions BSD = " + logitem.OFFflagBSD +
-                "\n\nGun vac = " + logitem.GunVacA + "x10^" + logitem.GunVacB +
-                "\n\nNote = " + logitem.OFFnote;
+                "\r\n\r\nFunctions EDX = " + logitem.OFFflagEDX +
+                "\r\nFunctions BSD = " + logitem.OFFflagBSD +
+                "\r\n\r\nGun vac = " + logitem.GunVacA + "x10^" + logitem.GunVacB +
+                "\r\n\r\nNote = " + logitem.OFFnote;
         }
     }
 }

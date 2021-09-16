@@ -35,6 +35,8 @@ namespace SEM_log
         {
             InitializeComponent();
             readLastSession(lastSession);
+            formFSL = new FormFSL(this);
+            formFSL.Show();
         }
 
         public cLog logitem;
