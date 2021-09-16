@@ -44,7 +44,9 @@ namespace SEM_log
                 return;
             }
             if (currentLog.user.ToLower() == "semsu" || currentLog.user.ToLower() == "fansu"
-                || currentLog.user.ToLower() == "supersuer")
+                || currentLog.user.ToLower() == "supersuer" || currentLog.user.ToLower() == "powermode"
+                || currentLog.user.ToLower() == "zeiss" || currentLog.user.ToLower() == "service"
+                || currentLog.user.ToLower() == "sudo" || currentLog.user.ToLower() == "runas")
             {
                 currentLog.OFFflagRepair = true;
             }
